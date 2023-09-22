@@ -1,0 +1,165 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background: url("./images/rock-image.jpg");
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    border: none;
+    color: rgba(255, 0, 0, 0);
+}
+
+.rock-button {
+    background: url("./images/rock-image.jpg");
+    background-size: contain;
+}
+
+.scissors-button {
+    background: url("./images/scissors-image.jpg");
+    background-size: contain;
+}
+
+.paper-button {
+    background: url("./images/paper-image.jpg");
+    background-size: contain;
+}
+
+.main-container {
+    width: 1000px;
+    height: 650px;
+    background-image: linear-gradient(to bottom right, #3a393e, #26222f);
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.title-container {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+
+.title-text {
+    font-size: 35px;
+    color: black;;
+}
+
+.interface-container {
+    width: 1000px;
+    height: 610px;
+    display: flex;
+}
+
+.choice-container {
+    width: 200px;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.btn-housing {
+    width: 175px;
+    height: 175px;
+    background-image: linear-gradient(to bottom, #e6e0ce, #d0cec0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-container {
+    width: 800px;
+    height: 610px;
+    display: flex;
+    flex-direction: column;
+}
+
+.computer-container {
+    width: 800px;
+    height: 366px;
+    display: flex;
+}
+
+.computer-monitor-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 533px;
+    height: 366px;
+}
+
+.computer-monitor {
+    display: flex;
+    background-color: beige;
+    color: blue;
+    width: 385px;
+    height: 342px;
+}
+
+.print-out-container {
+    width: 267px;
+    height: 366px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.score-container {
+    height: 250px;
+    width: 184px;
+    background-color: blue;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    height: 244px;
+}
+
+.results-container {
+    background-color: rgb(77, 126, 77);
+    width: 440px;
+    height: 170px;
+    margin-right: 40px;
+}
+
+.wiring-1 {
+    width: 147px;
+    height: 190px;
+    border-bottom: solid black 5px;
+    border-top: solid black 5px;
+    align-self: flex-start;
+    margin-top: 110px;
+}
+
+.wiring-2 {
+    width: 240px;
+    height: 135px;
+    align-self: flex-start;
+    border-bottom: solid black 5px;
+    border-right: solid black 5px;
+}
+
+.wiring-3 {
+    width: 75px;
+    height: 80px;
+    align-self: flex-start;
+    border-bottom: solid black 5px;
+}
+
+.wiring-4 {
+    width: 43px;
+    height: 150px;
+    align-self: flex-start;
+    border-bottom: solid black 5px;
+}
