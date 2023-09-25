@@ -4,7 +4,14 @@ const scoreDisplay = document.querySelector('.score-display');
 const gameOver = document.querySelector('.game-over');
 const computerImage = document.querySelector('.computer-image');
 const gameRound = document.querySelector('.game-round');
+const modal = document.querySelector('.modal');
+const modalText = document.querySelector('.modal-text');
+const overlay = document.querySelector('.overlay');
+const modalBtn = document.querySelector('.modal-btn');
 let currentComputerImage = '';
+
+let playerScore = 0;
+let computerScore = 0;
 
 btn.forEach((element) => {
     element.addEventListener('click', function(e) {
@@ -12,21 +19,6 @@ btn.forEach((element) => {
         playRound(playerSelection, getComputerSelection());
     })
 })
-
-function increaseRound() {
-    if (gameRound.textContent === 'Round: 5') {
-        //calculate winner function ''''calculateWinner(); --->sends info(parameter) to modal
-        //modal function ''''myModal();
-        setTimeout(function () { alert('game over'); }, 1);
-        return gameRound.textContent = 'Round: 5';
-    }
-    let text = Number(gameRound.textContent.slice(gameRound.textContent.length - 1));
-    let newText = ++text;
-    gameRound.textContent = 'Round:' + ' ' + newText;
-}
-
-let playerScore = 0;
-let computerScore = 0;
 
 function getComputerSelection() {
     let choice = Math.floor(Math.random() * 3);
@@ -95,3 +87,36 @@ function playRound(playerSelection, computerSelection) {
         increaseRound();
     }
 }
+
+function increaseRound() {
+    if (gameRound.textContent === 'Round: 5') {
+        calculateWinner();
+        modalFunction();
+        return gameRound.textContent = 'Round: 5';
+    }
+    let text = Number(gameRound.textContent.slice(gameRound.textContent.length - 1));
+    let newText = ++text;
+    gameRound.textContent = 'Round:' + ' ' + newText;
+}
+
+function modalFunction() {
+    setTimeout(function () {
+        modal.classList.toggle('hidden');
+        overlay.classList.toggle('hidden');
+    }, 500);
+}
+
+
+function calculateWinner() {
+    if (playerScore > computerScore) {
+        modalText.textContent = 'You Win!';
+    } else if (playerScore < computerScore) {
+        modalText.textContent = 'You Lose!';
+    } else {
+        modalText.textContent = 'It\'s a tie!';
+    }
+}
+
+modalBtn.addEventListener('click', () => {
+    window.location.href=window.location.href
+})
